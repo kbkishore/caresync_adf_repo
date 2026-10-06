@@ -28,7 +28,7 @@
 						"referenceName": "DS_SQL_Table_Config",
 						"type": "DatasetReference"
 					},
-					"firstRowOnly": false
+					"firstRowOnly": true
 				}
 			},
 			{
@@ -51,6 +51,8 @@
 			{
 				"name": "Source to Landing Ingestion",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Read Table Details",
@@ -114,7 +116,7 @@
 						"parameters": {
 							"container": "landing",
 							"folder": {
-								"value": "@concat(\n    activity('Read Table Details').output.value[0].source_system,\n    '/',\n    activity('Read Table Details').output.value[0].source_table_name,\n    '/',\n    variables('start_time')\n)",
+								"value": "@concat(\n    activity('Read Table Details').output.firstRow.source_system,\n    '/',\n    activity('Read Table Details').output.firstRow.source_table_name,\n    '/',\n    variables('start_time')\n)",
 								"type": "Expression"
 							}
 						}
