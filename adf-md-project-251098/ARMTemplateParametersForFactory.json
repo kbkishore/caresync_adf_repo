@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-md-project-251098"
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://metadataproject2510.dfs.core.windows.net/"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "caresync-2510-server.database.windows.net"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "sql-db-caresync-database"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "databeli"
+		},
+		"LS_KeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://caresync-keyvault-2510.vault.azure.net/"
+		},
+		"PostgreSql1_properties_typeProperties_server": {
+			"value": "ep-fragrant-scene-b3i4ai4w-pooler.c-4.ap-southeast-1.aws.neon.tech"
+		},
+		"PostgreSql1_properties_typeProperties_database": {
+			"value": "neondb"
+		},
+		"PostgreSql1_properties_typeProperties_username": {
+			"value": "neondb_owner"
+		}
+	}
+}
