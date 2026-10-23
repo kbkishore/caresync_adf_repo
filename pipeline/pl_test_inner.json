@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Read Source Table Data",
+				"name": "Read Table Details",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -16,15 +16,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "PostgreSqlV2Source",
-						"query": {
-							"value": "select * from PUBLIC.",
-							"type": "Expression"
-						},
-						"queryTimeout": "02:00:00"
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_PostgreSqlTable",
+						"referenceName": "DS_SQL_Table_Config",
 						"type": "DatasetReference"
 					}
 				}
