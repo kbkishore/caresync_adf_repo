@@ -32,7 +32,7 @@
 				}
 			},
 			{
-				"name": "Ingest All Tables",
+				"name": "Ingest All Table",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -61,7 +61,7 @@
 							"typeProperties": {
 								"variableName": "test",
 								"value": {
-									"value": "@item().table_id",
+									"value": "@string(item().table_id)",
 									"type": "Expression"
 								}
 							}
@@ -77,10 +77,10 @@
 			}
 		},
 		"variables": {
-			"test": {
-				"type": "String"
+			"dummy": {
+				"type": "Integer"
 			},
-			"test2": {
+			"test": {
 				"type": "Integer"
 			}
 		},
