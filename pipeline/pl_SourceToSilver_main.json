@@ -59,7 +59,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "test",
+								"variableName": "test2",
 								"value": ""
 							}
 						}
@@ -76,6 +76,9 @@
 		"variables": {
 			"test": {
 				"type": "String"
+			},
+			"test2": {
+				"type": "Integer"
 			}
 		},
 		"annotations": []
