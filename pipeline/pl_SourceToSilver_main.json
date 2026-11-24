@@ -59,8 +59,11 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "test2",
-								"value": ""
+								"variableName": "test",
+								"value": {
+									"value": "@item().table_id",
+									"type": "Expression"
+								}
 							}
 						}
 					]
